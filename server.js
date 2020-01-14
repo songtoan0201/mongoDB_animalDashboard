@@ -79,7 +79,7 @@ app.get("/animal/edit/:id", (req, res) => {
 });
 
 // delete the animal from the database by ID.
-app.get("/animal/destroy/:id", (req, res) => {
+app.post("/animal/destroy/:id", (req, res) => {
   Animal.deleteOne({ _id: req.params.id })
     .then(deletedUser => {
       res.redirect("/");
