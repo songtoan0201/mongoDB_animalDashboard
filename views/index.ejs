@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <% for (var animal of animals) { %>
+    <h3>Name: <a href="/animal/<%=animal.id%>"><%= animal.name %></a></h3>
+    <p><%= animal.id %></p>
+    <h3>Location: <%= animal.location %></h3>
+    <h3>Weight: <%= animal.weight %></h3>
+    <h3>Food: <%= animal.food %></h3>
+    <a href="/animal/edit/<%=animal.id%>">Edit</a>
+    <a href="/animal/destroy/<%=animal.id%>">Delete</a>
+    <!-- <form acion="/animal/destroy/<%=animal.id%>" method="POST">
+        <input type="submit" value="Delete">
+    </form> -->
+    <p>=======================================</p>
+    <% } %>
+</body>
+
+</html>

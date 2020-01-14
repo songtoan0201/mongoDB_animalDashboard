@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Edit Page</h1>
+    <form action="/animal/<%=animal.id%>" method="POST">
+        Name: <input type="text" name="name" value="<%=animal.name%>" />
+        Location: <input type="text" name="location" value="<%=animal.location%>" />
+        Weight: <input type="number" name="weight" value="<%=animal.weight%>" />
+        Food: <input type="text" name="food" value="<%=animal.food%>" />
+        <input type="submit" value="Edit!" />
+    </form>
+</body>
+
+</html>

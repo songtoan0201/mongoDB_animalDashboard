@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+</head>
+
+<body>
+
+    <!-- tip to easily see objects printed in full instead of [object Object] -->
+    <%- JSON.stringify(messages) %>
+    <!-- based on the structure of your messages, determine how to display them -->
+    <% if(messages.registration) { %>
+    <% for (var x of messages.registration) { %>
+    <h3><%= x %></h3>
+    <% } %>
+    <% } %>
+
+    <form action="/animal" method="POST">
+        Name: <input type="text" name="name" />
+        Location: <input type="text" name="location" />
+        Weight: <input type="number" name="weight" />
+        Food: <input type="text" name="food" />
+        <input type="submit" value="Add a New Animal!" />
+    </form>
+
+</body>
+
+</html>
